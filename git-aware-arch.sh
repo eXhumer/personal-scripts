@@ -14,9 +14,9 @@ export GIT_PS1_SHOWCOLORHINTS=true
 # SET PROMPT_COMMAND VARIABLE BASED ON WHETHER use_color IS SET OR NOT
 if ${use_color} ; then
         if [[ ${EUID} == 0 ]] ; then
-                PROMPT_COMMAND='__git_ps1 "\[\033[01;31m\][\h\[\033[01;36m\] \W\033[0m" "\[\033[01;31m\]]\$\[\033[00m\]>
+                PROMPT_COMMAND='__git_ps1 "\[\033[01;31m\][\h\[\033[01;36m\] \W\033[0m" "\[\033[01;31m\]]\$\[\033[00m\] "'
         else
-                PROMPT_COMMAND='__git_ps1 "\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\033[0m" "\[\033[01;32m\]]\$\[\033[00>
+                PROMPT_COMMAND='__git_ps1 "\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\033[0m" "\[\033[01;32m\]]\$\[\033[00m\] "'
         fi
 else
         if [[ ${EUID} == 0 ]] ; then
